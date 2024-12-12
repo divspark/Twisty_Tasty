@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 import { MdNoFood } from "react-icons/md";
 import { MdLogin } from "react-icons/md";
+import { PiBowlFoodBold } from "react-icons/pi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,12 +29,11 @@ const Navbar = () => {
   return (
     <nav className={`navbar bg-orange flex items-center `}>
       <div className='container w-screen'>
-        <div className='navbar-content text-white'>
-          <div className='brand-and-toggler flex justify-between items-center w-screen'>
+          <div className='navbar-content flex justify-between items-center w-full'>
             {/* Left side: Tasty Hub Brand */}
             <div className='navbar-brand-container flex items-center'>
-              <MdNoFood size={30} />
-              <span className='navbar-brand-text fw-7 ml-2'>Tasty Hub</span>
+            <PiBowlFoodBold size={30} className='text-white'/>
+              <span className='navbar-brand-text fw-7 ml-2'>Tasty Bites</span>
             </div>
 
             {/* Right side: Login Button */}
@@ -43,12 +43,11 @@ const Navbar = () => {
                 className="navbar-show-btn text-white flex align-center"
                 onClick={handleLoginClick}  // Use onClick to trigger navigation
               >
-                <MdLogin className="mr-2" />
-                <span className="ml-2">Login</span>
+                <MdLogin className="text-4xl" />
+                <span className="text-3xl ml-2">Login</span>
               </button>
             </div>
           </div>
-        </div>
       </div>
     </nav>
   )

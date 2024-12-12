@@ -39,14 +39,14 @@ const MealSingle = ({ meal }) => {
             </div>
 
             <div className='details-intro'>
-              <h3 className='title text-orange'>{meal?.title}</h3>
+              <h3 className='text-orange text-6xl'>{meal?.title}</h3>
               <div className='py-4'>
-                <div className='category flex align-center'>
+                <div className='flex align-center text-3xl mt-4'>
                   <span className='text-uppercase fw-8 ls-1 my-1'>category: &nbsp;</span>
                   <span className='text-uppercase ls-2'>{meal?.category}</span>
                 </div>
 
-                <div className='source flex align-center'>
+                <div className='source flex align-center text-2xl my-3'>
                   <span className='font-bold'>Source: &nbsp;</span>
                   <a href={meal?.source}>
                     {meal?.source ? meal.source.substring(0, 40) + "..." : "Not found"}

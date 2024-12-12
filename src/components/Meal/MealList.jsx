@@ -21,10 +21,10 @@ const MealList = ({ meals }) => {
                     <div className='meal-itm-cat bg-orange text-orange fw-6'>{category}</div>
                   </div>
 
-                  <div className='meal-itm-body'>
+                  <div className='meal-itm-body bg-orange-300 py-2'>
                     <div className='meal-itm-body-info flex flex-column'>
-                      <div className='area fs-14 ls-1 fw-5'>{area}</div>
-                      <div className='meal fw-15  op-09'>{meal}</div>
+                      <div className='area fs-14 ls-1 fw-5 no-underline'>{area}</div>
+                      <div className='meal fw-15  op-09 text-xl no-underline'>{meal}</div>
                     </div>
                   </div>
                 </Link>

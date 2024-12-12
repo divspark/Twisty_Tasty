@@ -42,8 +42,8 @@ const SearchForm = () => {
 
   return (
     <form className='search-form flex align-center' onSubmit={(e) => handleSearchResult(e)}>
-      <input type = "text" className='form-control-input text-dark-gray fs-15' placeholder='Search recipes here ...' onChange={(e) => handleSearchTerm(e)} />
-      <button type = "submit" className='form-submit-btn text-white text-uppercase fs-14'>
+      <input type = "text" className='py-4 px-32 rounded-full text-2xl text-dark-gray mr-3' placeholder='Search recipes here ...' onChange={(e) => handleSearchTerm(e)} />
+      <button type = "submit" className='form-submit-btn text-white text-uppercase flex items-center justify-center fs-14'>
         <BsSearch className='btn-icon' size = {20} />
       </button>
     </form>
