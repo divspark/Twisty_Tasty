@@ -43,7 +43,7 @@ function LoginSignup() {
       <div className="col-lg-6 d-flex align-items-center justify-content-center">
         <div className="w-100 py-16 px-10 bg-white rounded-xl shadow-lg" style={{ maxWidth: "500px" }}>
           <div className="text-center mb-5">
-            <img src="/trans_bg.png" alt="Logo" className="mb-4" style={{ maxWidth: "100px" }} />
+            <img src="/trans_bg.png" alt="Logo" className="mb-4 mx-auto" style={{ maxWidth: "100px" }} />
             <h2 className="fw-bold display-5">{isSignup ? "Sign Up" : "Log In"}</h2>
             <p className="text-secondary fs-5">
               {isSignup
