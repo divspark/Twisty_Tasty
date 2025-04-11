@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className='navbar-content flex justify-between items-center w-full'>
             {/* Left side: Tasty Hub Brand */}
             <div className='navbar-brand-container flex items-center'>
-              <img src="/trans_bg.png" alt="Brand Logo" className="w-10 h-10 object-contain" />
+              <img src="/trans_bg.png" alt="Brand Logo" className="w-16 h-16 object-contain" />
               <span className='navbar-brand-text fw-7 ml-2'>Tasty Bites</span>
             </div>
 
