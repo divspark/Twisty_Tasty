@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 import { MdNoFood } from "react-icons/md";
-import { MdLogin } from "react-icons/md";
+import { FaRegUserCircle } from "react-icons/fa";
 import { PiBowlFoodBold } from "react-icons/pi";
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,7 +44,7 @@ const Navbar = () => {
                 className="navbar-show-btn text-white flex align-center"
                 onClick={handleLoginClick}  // Use onClick to trigger navigation
               >
-                <MdLogin className="text-4xl" />
+                <FaRegUserCircle className="text-4xl" />
                 <span className="text-3xl ml-2">Login</span>
               </button>
             </div>
