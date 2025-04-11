@@ -25,9 +25,8 @@ function LoginSignup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can send this formData to your backend
     console.log("Submitted data:", formData);
-    navigate("/"); // redirect after login/signup
+    navigate("/");
   };
 
   return (
@@ -41,97 +40,95 @@ function LoginSignup() {
       </div>
 
       {/* Right side */}
-      <div className="col-lg-6">
-        <div className="row align-items-center justify-content-center h-100 g-0 px-4 ps-sm-0">
-          <div className="col col-sm-6 col-lg-7 col-xl-6">
-            <div className="text-center mb-5">
-              <h3 className="fw-bold">{isSignup ? "Sign Up" : "Log In"}</h3>
-              <p className="text-secondary">
-                {isSignup
-                  ? "Create your new account"
-                  : "Get access to your account"}
-              </p>
-            </div>
+      <div className="col-lg-6 d-flex align-items-center justify-content-center">
+        <div className="w-100 px-4" style={{ maxWidth: "500px" }}>
+          <div className="text-center mb-5">
+            <h2 className="fw-bold display-5">{isSignup ? "Sign Up" : "Log In"}</h2>
+            <p className="text-secondary fs-5">
+              {isSignup
+                ? "Create your new account"
+                : "Get access to your account"}
+            </p>
+          </div>
 
-            {/* Social Login */}
-            <button className="btn btn-lg btn-outline-secondary btn-outline-custom w-100 mb-3">
-              <i className="bx bxl-google text-danger me-1 fs-6"></i>
-              {isSignup ? "Signup with Google" : "Login with Google"}
-            </button>
-            <button className="btn btn-lg btn-outline-secondary btn-outline-custom w-100">
-              <i className="bx bxl-facebook text-primary me-1 fs-6"></i>
-              {isSignup ? "Signup with Facebook" : "Login with Facebook"}
-            </button>
+          {/* Social Login */}
+          <button className="btn btn-lg btn-outline-secondary btn-outline-custom w-100 mb-3 fs-5 py-3">
+            <i className="bx bxl-google text-danger me-2 fs-4"></i>
+            {isSignup ? "Signup with Google" : "Login with Google"}
+          </button>
+          <button className="btn btn-lg btn-outline-secondary btn-outline-custom w-100 fs-5 py-3">
+            <i className="bx bxl-facebook text-primary me-2 fs-4"></i>
+            {isSignup ? "Signup with Facebook" : "Login with Facebook"}
+          </button>
 
-            {/* Divider */}
-            <div className="position-relative">
-              <hr className="text-secondary divider" />
-              <div className="divider-content-center">or</div>
-            </div>
+          {/* Divider */}
+          <div className="position-relative my-4">
+            <hr className="text-secondary divider" />
+            <div className="divider-content-center fs-6">or</div>
+          </div>
 
-            {/* Form */}
-            <form onSubmit={handleSubmit}>
-              {isSignup && (
-                <div className="input-group mb-3">
-                  <span className="input-group-text">
-                    <i className="bx bx-user"></i>
-                  </span>
-                  <input
-                    type="text"
-                    className="form-control form-control-lg fs-6"
-                    placeholder="Name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-              )}
-
-              <div className="input-group mb-3">
+          {/* Form */}
+          <form onSubmit={handleSubmit}>
+            {isSignup && (
+              <div className="input-group mb-4">
                 <span className="input-group-text">
-                  <i className="bx bx-envelope"></i>
+                  <i className="bx bx-user fs-4"></i>
                 </span>
                 <input
-                  type="email"
-                  className="form-control form-control-lg fs-6"
-                  placeholder="Email"
-                  name="email"
-                  value={formData.email}
+                  type="text"
+                  className="form-control form-control-lg fs-5 py-3"
+                  placeholder="Name"
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                 />
               </div>
+            )}
 
-              <div className="input-group mb-3">
-                <span className="input-group-text">
-                  <i className="bx bx-lock-alt"></i>
-                </span>
-                <input
-                  type="password"
-                  className="form-control form-control-lg fs-6"
-                  placeholder="Password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <button type="submit" className="btn btn-primary btn-lg w-100 mb-3">
-                {isSignup ? "Sign Up" : "Login"}
-              </button>
-            </form>
-
-            <div className="text-center">
-              <small>
-                {isSignup ? "Already have an account?" : "Don't have an account?"}{" "}
-                <span
-                  className="fw-bold text-decoration-underline"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => navigate(isSignup ? "/login" : "/signup")}
-                >
-                  {isSignup ? "Log In" : "Sign Up"}
-                </span>
-              </small>
+            <div className="input-group mb-4">
+              <span className="input-group-text">
+                <i className="bx bx-envelope fs-4"></i>
+              </span>
+              <input
+                type="email"
+                className="form-control form-control-lg fs-5 py-3"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
+
+            <div className="input-group mb-4">
+              <span className="input-group-text">
+                <i className="bx bx-lock-alt fs-4"></i>
+              </span>
+              <input
+                type="password"
+                className="form-control form-control-lg fs-5 py-3"
+                placeholder="Password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </div>
+
+            <button type="submit" className="btn btn-primary btn-lg w-100 mb-3 fs-5 py-3">
+              {isSignup ? "Sign Up" : "Login"}
+            </button>
+          </form>
+
+          <div className="text-center mt-3">
+            <small className="fs-5">
+              {isSignup ? "Already have an account?" : "Don't have an account?"}{" "}
+              <span
+                className="fw-bold text-decoration-underline"
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate(isSignup ? "/login" : "/signup")}
+              >
+                {isSignup ? "Log In" : "Sign Up"}
+              </span>
+            </small>
           </div>
         </div>
       </div>
