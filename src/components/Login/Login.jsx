@@ -41,7 +41,7 @@ function LoginSignup() {
 
       {/* Right side */}
       <div className="col-lg-6 d-flex align-items-center justify-content-center">
-        <div className="w-100 py-8 px-4 bg-white rounded-lg" style={{ maxWidth: "500px" }}>
+        <div className="w-100 py-16 px-10 bg-white rounded-xl shadow-lg" style={{ maxWidth: "500px" }}>
           <div className="text-center mb-5">
             <h2 className="fw-bold display-5">{isSignup ? "Sign Up" : "Log In"}</h2>
             <p className="text-secondary fs-5">
